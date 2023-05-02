@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".About_Page">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:background="@drawable/shape"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="About"
+            android:textSize="50sp"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:fontFamily="@font/font1"/>
+
+    </LinearLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="My Tasbih"
+                android:fontFamily="@font/font1"
+                android:textColor="@color/black"
+                android:textAlignment="center"
+                android:textSize="30sp"/>
+            <ImageView
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:src="@drawable/logo1"
+                android:layout_gravity="center"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="App Detail"
+                android:textColor="@color/black"
+                android:textAlignment="center"
+                android:textSize="40sp"
+                android:fontFamily="@font/font1"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Minimum Android OS: Android 7"
+                android:textColor="@color/black"
+                android:textSize="25sp" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Android API Level : API 24 Level"
+                android:textColor="@color/black"
+                android:textSize="25sp" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Android Code Name: Nougat"
+                android:textColor="@color/black"
+                android:textSize="25sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="App Developer"
+                android:textColor="@color/black"
+                android:textAlignment="center"
+                android:textSize="40sp"
+                android:fontFamily="@font/font1"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Fahmida Yeasmin"
+                android:textColor="@color/black"
+                android:textAlignment="center"
+                android:textSize="40sp" />
+
+            <ImageView
+                android:layout_width="200dp"
+                android:layout_height="250dp"
+                 android:src="@drawable/me"
+                android:layout_gravity="center"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text=" Computer Technology"
+                android:textColor="@color/black"
+                android:textAlignment="center"
+                android:textSize="25sp" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text=" Institute of Science Trade &amp; Technology"
+                android:textColor="@color/black"
+                android:textAlignment="center"
+                android:textSize="25sp" />
+
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+
+
+
+
+
+
+
+</LinearLayout>
