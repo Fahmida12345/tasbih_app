@@ -51,7 +51,7 @@ public class Compass extends AppCompatActivity implements SensorEventListener {
             animation.setFillAfter(true);
 
             qiblaC.startAnimation(animation);
-            crrDeg = degree;
+            crrDeg = -degree;
         }
 
     @Override
