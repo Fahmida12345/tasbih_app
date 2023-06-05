@@ -1,19 +1,26 @@
 package com.example.testapp;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
 import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.RotateAnimation;
+import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 public class Compass extends AppCompatActivity implements SensorEventListener {
     ImageView qiblaC;
     SensorManager manager;
+    AlertDialog dialog;
 
     float degree = 0;
     float crrDeg = 0;
@@ -26,6 +33,30 @@ public class Compass extends AppCompatActivity implements SensorEventListener {
         qiblaC = findViewById(R.id.qiblaC);
         manager = (SensorManager) getSystemService(SENSOR_SERVICE);
 
+        if(manager.getDefaultSensor(Sensor.TYPE_MAGNETIC_FIELD) != null){
+            Toast.makeText(this, "Rotate your phone to calibrate the sensor ", Toast.LENGTH_LONG).show();
+        }else {
+            showalert();
+        }
+
+    }
+
+    private void showalert() {
+        LayoutInflater inflater = getLayoutInflater();
+        View view = inflater.inflate(R.layout.alert, null);
+
+        dialog = new AlertDialog.Builder(Compass.this).setView(view).create();
+        dialog.show();
+
+        Button alertBtn = view.findViewById(R.id.alartBtn);
+
+        alertBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(Compass.this, homePage.class);
+                startActivity(i);
+            }
+        });
     }
 
     @Override
